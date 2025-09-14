@@ -30,7 +30,7 @@ def findAllDevices(idVendor):
             serialNumber = dev.serial_number
         except:
             serialNumber = 'Unknown'
-        str = f'{manufacturer}{product}, SN: {serialNumber}'
+        str = f'{manufacturer}:{product}, SN: {serialNumber}'
         dev_descriptor = {'text': str, 'dev': dev}
         res.append(dev_descriptor)
     return res
