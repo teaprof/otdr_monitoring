@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>770</width>
+    <height>569</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <weight>50</weight>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>OTDR Monitoring for Yokogawa 7270 Series</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QTabBar::close-button
+{
+/*	image: url(&quot;:/images/tab-close&quot;)*/
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="spacing">
+     <number>1</number>
+    </property>
+    <property name="leftMargin">
+     <number>1</number>
+    </property>
+    <property name="topMargin">
+     <number>1</number>
+    </property>
+    <property name="rightMargin">
+     <number>1</number>
+    </property>
+    <property name="bottomMargin">
+     <number>1</number>
+    </property>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+      <property name="usesScrollButtons">
+       <bool>true</bool>
+      </property>
+      <property name="documentMode">
+       <bool>true</bool>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>770</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionExportReflectogram"/>
+    <addaction name="actionSaveFigureAs"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="actionPlugins"/>
+    <addaction name="actionSettings"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <widget class="QMenu" name="menuNew_plotter">
+     <property name="title">
+      <string>New plotter</string>
+     </property>
+     <addaction name="actionCreateDataPlotter"/>
+     <addaction name="actionCreateAveragerPlotter"/>
+     <addaction name="actionCreatePartialSumPlotter"/>
+    </widget>
+    <addaction name="menuNew_plotter"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuOptions"/>
+   <addaction name="menuView"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionFindDevice"/>
+   <addaction name="actionSelectParameters"/>
+   <addaction name="actionSingleMeasurement"/>
+   <addaction name="actionStop"/>
+   <addaction name="actionAutosave"/>
+   <addaction name="actionClear"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="actionFindDevice">
+   <property name="icon">
+    <iconset theme="network-connect">
+     <normaloff>../../../../monitoring/gui/mainwindow</normaloff>../../../../monitoring/gui/mainwindow</iconset>
+   </property>
+   <property name="text">
+    <string>Find device</string>
+   </property>
+   <property name="toolTip">
+    <string>Find and connect to the reflectometer</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset theme="application-exit">
+     <normaloff>../../../../monitoring/gui/mainwindow</normaloff>../../../../monitoring/gui/mainwindow</iconset>
+   </property>
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="actionExportReflectogram">
+   <property name="icon">
+    <iconset theme="document-export">
+     <normaloff>../../../../monitoring/gui/mainwindow</normaloff>../../../../monitoring/gui/mainwindow</iconset>
+   </property>
+   <property name="text">
+    <string>Export reflectogram as...</string>
+   </property>
+   <property name="toolTip">
+    <string>Export last measured reflectogram as...</string>
+   </property>
+  </action>
+  <action name="actionSaveFigureAs">
+   <property name="icon">
+    <iconset theme="document-save-as">
+     <normaloff>../../../../monitoring/gui/mainwindow</normaloff>../../../../monitoring/gui/mainwindow</iconset>
+   </property>
+   <property name="text">
+    <string>Save figure as...</string>
+   </property>
+   <property name="toolTip">
+    <string>Save current figure as</string>
+   </property>
+  </action>
+  <action name="actionPlugins">
+   <property name="text">
+    <string>Plugins...</string>
+   </property>
+  </action>
+  <action name="actionSelectParameters">
+   <property name="icon">
+    <iconset theme="configure">
+     <normaloff>../../../../monitoring/gui/mainwindow</normaloff>../../../../monitoring/gui/mainwindow</iconset>
+   </property>
+   <property name="text">
+    <string>Select parameters</string>
+   </property>
+  </action>
+  <action name="actionSingleMeasurement">
+   <property name="icon">
+    <iconset theme="go-next">
+     <normaloff>../../../../monitoring/gui/mainwindow</normaloff>../../../../monitoring/gui/mainwindow</iconset>
+   </property>
+   <property name="text">
+    <string>Single measurement</string>
+   </property>
+  </action>
+  <action name="actionAutosave">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="document-save">
+     <normaloff>../../../../monitoring/gui/mainwindow</normaloff>../../../../monitoring/gui/mainwindow</iconset>
+   </property>
+   <property name="text">
+    <string>Autosave</string>
+   </property>
+   <property name="toolTip">
+    <string>Auto save measured data</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="icon">
+    <iconset theme="settings">
+     <normaloff>../../../../monitoring/gui/mainwindow</normaloff>../../../../monitoring/gui/mainwindow</iconset>
+   </property>
+   <property name="text">
+    <string>Settings...</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="icon">
+    <iconset theme="edit-clear-history">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>Clear</string>
+   </property>
+   <property name="toolTip">
+    <string>Clear all tabs</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="icon">
+    <iconset theme="stop">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionCreateDataPlotter">
+   <property name="icon">
+    <iconset theme="labplot-xy-curve-segments">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>current data</string>
+   </property>
+  </action>
+  <action name="actionCreateAveragerPlotter">
+   <property name="icon">
+    <iconset theme="labplot-xy-equation-curve">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>averager</string>
+   </property>
+  </action>
+  <action name="actionCreatePartialSumPlotter">
+   <property name="icon">
+    <iconset theme="labplot-xy-curve-points">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>partial sum</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

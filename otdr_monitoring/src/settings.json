@@ -1,0 +1,27 @@
+{
+  "autosavepath": "../data",
+  "autosaveAsJSON": true,
+  "autosaveAsCSV": true,
+  "AQ7270Series": {
+    "wavelength": "1550E-09",
+    "drange": "AUTO",
+    "pwidth": "AUTO",
+    "attenuation": "AUTO",
+    "smpinterval": "NORMAL",
+    "avermode": "HIREFLECTION",
+    "avertype": "TIMES",
+    "nmeasurements": "AUTO",
+    "smptime": "5"
+  },
+  "AQ7270Simulator": {
+    "wavelength": "1550E-09",
+    "drange": "AUTO",
+    "pwidth": "AUTO",
+    "attenuation": "AUTO",
+    "smpinterval": "NORMAL",
+    "avermode": "HIREFLECTION",
+    "avertype": "TIMES",
+    "nmeasurements": "AUTO",
+    "smptime": "5"
+  }
+}

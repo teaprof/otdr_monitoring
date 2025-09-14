@@ -1,0 +1,39 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[OT1]{fontenc}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{dirtree}
+\usepackage{xcolor}
+
+%1. TEX Gyre Bonum font family
+%\usepackage{tgbonum}
+
+%2. Computer Modern Sans Serif font
+\renewcommand*\familydefault{\sfdefault}
+
+\newcommand*\mean[1]{\bar{#1}}
+
+\begin{document}
+
+\author{Egor Tsvetkov}
+\title{The monitoring software\textcolor{red}{The document is outdated}}
+\date{August 2022}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+\include{chapter01}
+\include{chapter02}
+
+\backmatter
+% bibliography, glossary and index would go here.
+
+\end{document}
