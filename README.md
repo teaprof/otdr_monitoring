@@ -2,7 +2,7 @@
 
 This is an extendable visualizer for Yokogawa OTDR reflectometer with GUI based on PySide (Qt). The main goal of this project is to continuously monitor the optical fiber communication line. If the reflectogram changes significantly, the program will indicate this.
 
-The project was used to monitor optical fiber in some quantum communication startup.
+The application was used to monitor optical-fiber communication line in one quantum key distribution project (QKD).
 
 ## Features
 
