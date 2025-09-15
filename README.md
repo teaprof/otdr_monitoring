@@ -1,8 +1,10 @@
-# OTDR Monitoring for Yokogawa AQ7270 series reflectometer
+# ![logo][] OTDR Monitoring for Yokogawa AQ7270 series reflectometer
 
 This is an extendable visualizer for Yokogawa OTDR reflectometer with GUI based on PySide (Qt). The main goal of this project is to continuously monitor the optical fiber communication line. If the reflectogram changes significantly, the program will indicate this.
 
 The application was used to monitor optical-fiber communication line in one quantum key distribution project (QKD).
+
+[logo]: githubicon/OTDR_Interface_with_Significant_Change_Alert.png
 
 ## Features
 
