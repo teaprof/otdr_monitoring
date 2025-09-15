@@ -4,7 +4,7 @@ This is an extendable visualizer for Yokogawa OTDR reflectometer with GUI based 
 
 The application was used to monitor optical-fiber communication line in one quantum key distribution project (QKD).
 
-[logo]: githubicon/icon128x88.png
+[logo]: githubicon/icon32x25.png
 
 ## Features
 
